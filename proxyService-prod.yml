@@ -1,3 +1,4 @@
+
 server:
   port: 8040
 
@@ -16,9 +17,9 @@ zuul:
   routes:
     employee:
       path: /employee/**
-      serviceId: EMPLOYEE-SERVICE
+      serviceId: employeeService
      # url: http://localhost:8010
     finance:
       path: /finance/**
-      serviceId: FINANCE-SERVICE
+      serviceId: financeService
       #url: http://localhost:8020
