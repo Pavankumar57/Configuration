@@ -2,16 +2,13 @@ server:
   port: 8010
 
 
-spring:
-  cloud:
-    discovery:
-      client:
-        simple:
-          instances:
-            test:
-              - uri: http://client:client@localhost:8030/
-                metadata:
-                  management.context-path: /actuator
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://client:client@localhost:8030/eureka/
+      
     
 instance:
   hostname: localhost
